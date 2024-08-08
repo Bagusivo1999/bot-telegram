@@ -5,6 +5,14 @@ from watchdog.events import FileSystemEventHandler
 import threading
 from datetime import datetime
 
+# Membuat file requirements.txt
+with open("requirements.txt", "w") as file:
+    file.write("telebot\n")
+    file.write("watchdog\n")
+
+# Menginstal dependensi dari requirements.txt
+os.system("pip install -r requirements.txt")
+
 # Replace 'YOUR_API_KEY' with your actual API key from BotFather
 API_KEY = '7444819647:AAGXD1dWDlIkne4EdlKyRgJEZHyCvPtIpog'
 bot = telebot.TeleBot(API_KEY)
